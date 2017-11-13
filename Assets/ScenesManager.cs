@@ -28,6 +28,7 @@ public class ScenesManager: MonoBehaviour {
 	public void toMinigame()
     {
 		SceneManager.LoadScene ("MiniGame");
+        GameManager.Instance.Starting(); //Deja todos los puntajes de los jugadores en 0;
 	}
 
 	public void toMainMenu()
@@ -39,4 +40,6 @@ public class ScenesManager: MonoBehaviour {
 	{
 		
 	}
+
+
 }
