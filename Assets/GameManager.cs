@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     int jugadaIndex; //(0,5)
 
     private Pieza PiezaCorrecta;
+    public FormaImagen[] formasImagen;
 
     public void Awake()
     {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour {
         {
             Instance = this;
         }
+     
         DontDestroyOnLoad(this);
     }
 
