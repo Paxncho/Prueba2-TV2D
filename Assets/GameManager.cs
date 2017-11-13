@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance { get; set; }
 
+    public Text PlayersText;
+
+    int numPlayers; //Número "Temporal" de jugadores
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
@@ -82,4 +86,16 @@ public class GameManager : MonoBehaviour {
         }
         return null;
     }
+
+    public void ChangePlayerNum(int num) {
+        if (numPlayers + num > 0)
+            numPlayers += num;
+        PlayersText.text = numPlayers.ToString();
+    }
+
+    public void Play() {
+        Players = new int[numPlayers];
+        //Cargar Minigame
+    }
+
 }
