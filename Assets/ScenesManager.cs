@@ -36,9 +36,14 @@ public class ScenesManager: MonoBehaviour {
 		SceneManager.LoadScene ("MainMenu");
 	}
 
-	public void checkResult(bool isCorrect)
+	public void showResultado(bool isCorrect)
 	{
-		
+		if (isCorrect) {
+			foreach(GameObject objeto in GameObject.FindGameObjectsWithTag("Finish"))
+			{
+				objeto.SetActive(true);
+			}
+		}
 	}
 
 
