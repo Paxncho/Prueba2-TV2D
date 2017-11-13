@@ -6,18 +6,14 @@ public class GameManager : MonoBehaviour {
 
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
+    bool correct;
 
     //RecetaActual Jaime
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    public void Check(int index)
+    {
+
+    }
 
     void GenerarReceta()
     {
@@ -30,6 +26,19 @@ public class GameManager : MonoBehaviour {
         {
             Players[i] = 0;
         }
+    }
+
+    private void AddScoreToPlayer(int index, int puntosToAdd)
+    {
+        if (Players[index] == 0)
+        {
+            return;
+        }
+        else
+        {
+            Players[index] += puntosToAdd;
+        }
+
     }
 
 }
