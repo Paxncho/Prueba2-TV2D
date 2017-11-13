@@ -5,16 +5,28 @@ using UnityEngine;
 
 public class ScenesManager: MonoBehaviour {
 
-	void Start()
+    public static ScenesManager Instance;
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        DontDestroyOnLoad(this);
+    }
+
+    void Start()
 	{
+
 	}
 
 	void Update()
 	{
+
 	}
 
-
-	public void toMinigame(){
+	public void toMinigame()
+    {
 		SceneManager.LoadScene ("MiniGame");
 	}
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-    GameManager Instance { get; set; }
+    public static GameManager Instance { get; set; }
 
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)

@@ -27,6 +27,7 @@ public class Pieza : MonoBehaviour
         sp.color = color;
         sp.sprite = forma.imagen;
     }
+
     void OnMouseDown()
     {
 

@@ -6,6 +6,7 @@ using UnityEngine;
 public class FormaImagen : MonoBehaviour {
     public Pieza.Forma forma;
     public Sprite imagen;
+
 	// Use this for initialization
 	void Start () {
 		
