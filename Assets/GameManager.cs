@@ -9,19 +9,6 @@ public class GameManager : MonoBehaviour {
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
-<<<<<<< HEAD
-    //RecetaActual Jaime
-    
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-=======
     private Pieza PiezaCorrecta;
 
     public void Awake()
@@ -60,7 +47,6 @@ public class GameManager : MonoBehaviour {
 
 
     }
->>>>>>> origin/master
 
     void GenerarReceta()
     {
@@ -76,4 +62,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    void AddScoreToPlayer(int index, int toAddScore)
+    {
+
+        Players[index] += toAddScore;
+
+
+    }
 }
