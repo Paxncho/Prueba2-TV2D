@@ -10,15 +10,14 @@ public class Pieza : MonoBehaviour
     {
         Triangulo, Cuadrado, Circulo, Estrella
     }
-    [SerializeField]
+    
     public Forma forma;
-    [SerializeField]
- 
-    public Color color;
+
+     public Color color = Color.white;
     // Use this for initialization
     void Start()
     {
-
+        color.a = 1;
     }
 
     // Update is called once per frame
