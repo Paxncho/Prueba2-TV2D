@@ -8,8 +8,10 @@ public class Pieza : MonoBehaviour
     {
         Triangulo, Cuadrado, Circulo, Estrella
     }
-
+    [SerializeField]
     public Forma forma;
+    [SerializeField]
+ 
     public Color color;
     // Use this for initialization
     void Start()
@@ -25,7 +27,7 @@ public class Pieza : MonoBehaviour
     void OnMouseDown()
     {
 
-        SceneManager.Instance.showResultado((GameManager.Instance.pieza.forma = forma && GameManager.Instance.pieza.color = color));
+        //SceneManager.Instance.showResultado((GameManager.Instance.pieza.forma = forma && GameManager.Instance.pieza.color = color));
 
     }
 }
