@@ -11,7 +11,7 @@ public class Pieza : MonoBehaviour
         Triangulo, Cuadrado, Circulo, Estrella
     }
     [SerializeField]
-    public FormaImagen forma;
+    public Forma forma;
     [SerializeField]
  
     public Color color;
@@ -26,7 +26,7 @@ public class Pieza : MonoBehaviour
     {
         Image sp = GetComponent<Image>();
         sp.color = color;
-        sp.sprite = forma.imagen;
+        sp.sprite = GameManager.Instance.getSprite(forma);
     }
 
     void OnMouseDown()

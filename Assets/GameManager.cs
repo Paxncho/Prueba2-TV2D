@@ -71,4 +71,15 @@ public class GameManager : MonoBehaviour {
 
 
     }
+    public Sprite getSprite(Pieza.Forma forma)
+    {
+        for (int i = 0; i < formasImagen.Length; i++)
+        {
+            if (formasImagen[i].forma == forma)
+            {
+                return formasImagen[i].imagen;
+            }
+        }
+        return null;
+    }
 }
