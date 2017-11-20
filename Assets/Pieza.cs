@@ -17,15 +17,15 @@ public class Pieza : MonoBehaviour
 
     void Start()
     {
+        sp = GetComponent<Image>();
         color.a = 1;
         randomize();
     }
 
     void Update()
     {
-        sp = GetComponent<Image>();
-        sp.color = color;
-        sp.sprite = GameManager.Instance.getSprite(forma);
+        //sp.color = color;
+        //sp.sprite = GameManager.Instance.getSprite(forma);
     }
 
     void OnMouseDown()
@@ -39,7 +39,7 @@ public class Pieza : MonoBehaviour
     {
         int randomForma = Random.Range(0, 4);
         int randomColor = Random.Range(0, 4);
-        int randomCorrecto = Random.Range(0, 1);
+        int randomCorrecto = Random.Range(0, 2);
 
 
         switch (randomForma)
@@ -59,11 +59,17 @@ public class Pieza : MonoBehaviour
         }
 
         sp.sprite = GameManager.Instance.getSprite(forma);
+        sp.color = color;
 
 
         if (randomCorrecto == 1)
         {
             GameManager.Instance.PiezaCorrecta = this;
+
+            Pieza piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Pieza>();
+            piezaCorrecta.color = color;
+            piezaCorrecta.forma = forma;
+            Debug.Log("ESCOJIDO");
         }
     }
 }
