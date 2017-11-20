@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public Text PlayersText;
 
-    public int numPlayers; //Número "Temporal" de jugadores
+    public int numPlayers = 1; //Número "Temporal" de jugadores
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
         {
             Instance = this;
             DontDestroyOnLoad(this);
+            Debug.Log("CEMAMO");
         }
         else
         {
@@ -33,8 +34,8 @@ public class GameManager : MonoBehaviour {
 
     public void Starting()
     {
+        Play();
         ResetScores();
-        
     }
 
     public void Check(int index, Pieza piezaSeleccionada)
@@ -68,11 +69,9 @@ public class GameManager : MonoBehaviour {
 
     void AddScoreToPlayer(int index, int toAddScore)
     {
-
         Players[index] += toAddScore;
-
-
     }
+
     public Sprite getSprite(Pieza.Forma forma)
     {
         for (int i = 0; i < formasImagen.Length; i++)
