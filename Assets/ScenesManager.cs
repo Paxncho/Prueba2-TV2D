@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScenesManager: MonoBehaviour {
 
@@ -46,5 +47,10 @@ public class ScenesManager: MonoBehaviour {
 		}
 	}
 
+	public void showJugadores()
+	{
+		//int cantJugadores = GameManager.Instance;
+
+	}
 
 }
