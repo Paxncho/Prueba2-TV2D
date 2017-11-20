@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ScenesManager: MonoBehaviour {
 
 	public GameObject botonjugador;
+    public GameObject Panel;
+    public GameObject Gameover;
 
     public static ScenesManager Instance;
     void Awake()
@@ -14,25 +16,42 @@ public class ScenesManager: MonoBehaviour {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this);
+
         }
-        DontDestroyOnLoad(this);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
 	{
+        
+    }
 
-	}
+    void OnLevelWasLoaded(int level)
+    {
+        GameObject go = GameObject.Find("PanelJugadores");
+
+        if (go != null)
+        {
+            Panel = go;
+            Panel.SetActive(false);
+        }
+    }
 
 	void Update()
 	{
-
-	}
+        
+    }
 
 	public void toMinigame()
     {
 		SceneManager.LoadScene ("MiniGame");
         GameManager.Instance.Starting(); //Deja todos los puntajes de los jugadores en 0;
-	}
+        
+    }
 
 	public void toMainMenu()
 	{
@@ -52,7 +71,8 @@ public class ScenesManager: MonoBehaviour {
 	public void createJugadores()
 	{
 		int cantJugadores = GameManager.Instance.numPlayers;
-		GameObject Panel = GameObject.Find ("PanelJugadores");
+        //Panel = GameObject.Find ("PanelJugadores");
+        this.Panel.SetActive(true);
 		for (int i = 1; i <= cantJugadores; i++) {
 			Text texto = Instantiate(botonjugador, Panel.transform).GetComponentInChildren<Text>();
 			texto.text = "Jugador " + i;

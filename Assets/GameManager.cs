@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour {
         {
             Instance = this;
             DontDestroyOnLoad(this);
-            Debug.Log("CEMAMO");
         }
         else
         {
@@ -36,6 +35,8 @@ public class GameManager : MonoBehaviour {
     {
         Play();
         ResetScores();
+        ScenesManager.Instance.Panel.SetActive(false);
+        ScenesManager.Instance.Gameover.SetActive(false);
     }
 
     public void Check(int index, Pieza piezaSeleccionada)
