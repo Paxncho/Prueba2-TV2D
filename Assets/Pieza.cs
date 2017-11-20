@@ -29,11 +29,8 @@ public class Pieza : MonoBehaviour
 
     void Update()
     {
-<<<<<<< HEAD
-=======
-        //sp.color = color;
->>>>>>> c62b27af6a094894976674791488aeed7d039102
-        //sp.sprite = GameManager.Instance.getSprite(forma);
+
+
     }
 
     void check()
@@ -72,15 +69,15 @@ public class Pieza : MonoBehaviour
         if (randomCorrecto == 1)
         {
             GameManager.Instance.PiezaCorrecta = this;
-<<<<<<< HEAD
+
             Debug.Log("Escogi");
-=======
+
 
             Image piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Image>();
             piezaCorrecta.color = color;
             piezaCorrecta.sprite = GameManager.Instance.getSprite(forma);
             Debug.Log("ESCOJIDO");
->>>>>>> c62b27af6a094894976674791488aeed7d039102
+
         }
     }
 }
