@@ -66,9 +66,9 @@ public class Pieza : MonoBehaviour
         {
             GameManager.Instance.PiezaCorrecta = this;
 
-            Pieza piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Pieza>();
+            Image piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Image>();
             piezaCorrecta.color = color;
-            piezaCorrecta.forma = forma;
+            piezaCorrecta.sprite = GameManager.Instance.getSprite(forma);
             Debug.Log("ESCOJIDO");
         }
     }

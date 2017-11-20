@@ -1309,6 +1309,11 @@ Prefab:
       propertyPath: m_TagString
       value: Recipe
       objectReference: {fileID: 0}
+    - target: {fileID: 114011774022004678, guid: a0ef4f113670eeb40a2c0a17723313ec,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0ef4f113670eeb40a2c0a17723313ec, type: 2}
   m_IsPrefabParent: 0
@@ -2441,7 +2446,7 @@ MonoBehaviour:
   - forma: 2
     imagen: {fileID: 21300000, guid: 6f3eb9883d25e564fb131cfd114c4f21, type: 3}
   - forma: 3
-    imagen: {fileID: 21300000, guid: c8310460bfc915c4eb356b7b1f7f7899, type: 3}
+    imagen: {fileID: 21300000, guid: 52200edb82952cb4b9f1acf96441fda5, type: 3}
 --- !u!4 &1994233010
 Transform:
   m_ObjectHideFlags: 0
