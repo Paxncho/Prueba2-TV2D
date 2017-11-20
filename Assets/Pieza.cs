@@ -6,6 +6,8 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Pieza : MonoBehaviour
 {
+    Button MyButton;
+
     public enum Forma
     {
         Triangulo, Cuadrado, Circulo, Estrella
@@ -17,27 +19,28 @@ public class Pieza : MonoBehaviour
 
     void Start()
     {
+        sp = GetComponent<Image>();
         color.a = 1;
         randomize();
+
+        MyButton = GetComponent<Button>();
+        MyButton.onClick.AddListener(check);
     }
 
     void Update()
     {
-        sp = GetComponent<Image>();
-        sp.color = color;
-        sp.sprite = GameManager.Instance.getSprite(forma);
+        //sp.sprite = GameManager.Instance.getSprite(forma);
     }
 
-    void OnMouseDown()
+    void check()
     {
 
-        //SceneManager.Instance.showResultado((GameManager.Instance.pieza.forma.forma = forma && GameManager.Instance.pieza.color = color));
 
     }
 
     void randomize()
     {
-        int randomForma = Random.Range(0, 4);
+        int randomForma = Random.Range(0, 3);
         int randomColor = Random.Range(0, 4);
         int randomCorrecto = Random.Range(0, 1);
 
@@ -59,11 +62,13 @@ public class Pieza : MonoBehaviour
         }
 
         sp.sprite = GameManager.Instance.getSprite(forma);
+        sp.color = color;
 
 
         if (randomCorrecto == 1)
         {
             GameManager.Instance.PiezaCorrecta = this;
+            Debug.Log("Escogi");
         }
     }
 }
