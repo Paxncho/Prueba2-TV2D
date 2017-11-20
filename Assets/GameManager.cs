@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour {
 
     public Text PlayersText;
 
-    int numPlayers; //Número "Temporal" de jugadores
+    public int numPlayers; //Número "Temporal" de jugadores
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
-    private Pieza PiezaCorrecta;
+    public Pieza PiezaCorrecta;
     public FormaImagen[] formasImagen;
 
     public void Awake()
@@ -21,9 +21,13 @@ public class GameManager : MonoBehaviour {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this);
         }
-     
-        DontDestroyOnLoad(this);
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 
@@ -50,12 +54,6 @@ public class GameManager : MonoBehaviour {
         {
             AddScoreToPlayer(index, -1);
         }
-
-
-    }
-
-    void GenerarReceta()
-    {
 
 
     }
@@ -97,5 +95,12 @@ public class GameManager : MonoBehaviour {
         Players = new int[numPlayers];
         //Cargar Minigame
     }
+
+    public void Generate()
+    {
+
+
+    }
+
 
 }
