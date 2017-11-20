@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ScenesManager: MonoBehaviour {
 
+	public GameObject botonjugador;
+
     public static ScenesManager Instance;
     void Awake()
     {
@@ -49,8 +51,9 @@ public class ScenesManager: MonoBehaviour {
 
 	public void showJugadores()
 	{
-		//int cantJugadores = GameManager.Instance;
-
+		int cantJugadores = GameManager.Instance.numPlayers;
+		GameObject Panel = GameObject.Find ("PanelJugadores");
+		//Panel.transform.
 	}
 
 }
