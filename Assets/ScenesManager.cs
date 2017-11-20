@@ -49,11 +49,13 @@ public class ScenesManager: MonoBehaviour {
 		}
 	}
 
-	public void showJugadores()
+	public void createJugadores()
 	{
 		int cantJugadores = GameManager.Instance.numPlayers;
 		GameObject Panel = GameObject.Find ("PanelJugadores");
-		//Panel.transform.
+		for (int i = 1; i <= cantJugadores; i++) {
+			Text texto = Instantiate(botonjugador, Panel.transform).GetComponentInChildren<Text>();
+			texto.text = "Jugador " + i;
+		}
 	}
-
 }

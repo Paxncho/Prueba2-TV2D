@@ -1133,6 +1133,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayersText: {fileID: 68988321}
+  numPlayers: 3
+  PiezaCorrecta: {fileID: 0}
   formasImagen:
   - forma: 0
     imagen: {fileID: 21300000, guid: a000f5316f3bd68479ce1fee77cc1a6f, type: 3}
@@ -1378,6 +1380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b201a175c5573d14aba83db0b27f9232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  botonjugador: {fileID: 1961893953869144, guid: 9db8ca5b558ab8843a962f3e5715e1ed,
+    type: 2}
 --- !u!1 &2024540672
 GameObject:
   m_ObjectHideFlags: 0
