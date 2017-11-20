@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public Text PlayersText;
 
-    public int numPlayers; //Número "Temporal" de jugadores
+    public int numPlayers = 1; //Número "Temporal" de jugadores
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour {
 
     public void Starting()
     {
+        Play();
         ResetScores();
     }
 

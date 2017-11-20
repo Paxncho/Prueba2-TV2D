@@ -29,6 +29,10 @@ public class Pieza : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
+=======
+        //sp.color = color;
+>>>>>>> c62b27af6a094894976674791488aeed7d039102
         //sp.sprite = GameManager.Instance.getSprite(forma);
     }
 
@@ -42,7 +46,7 @@ public class Pieza : MonoBehaviour
     {
         int randomForma = Random.Range(0, 3);
         int randomColor = Random.Range(0, 4);
-        int randomCorrecto = Random.Range(0, 1);
+        int randomCorrecto = Random.Range(0, 2);
 
 
         switch (randomForma)
@@ -68,7 +72,15 @@ public class Pieza : MonoBehaviour
         if (randomCorrecto == 1)
         {
             GameManager.Instance.PiezaCorrecta = this;
+<<<<<<< HEAD
             Debug.Log("Escogi");
+=======
+
+            Pieza piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Pieza>();
+            piezaCorrecta.color = color;
+            piezaCorrecta.forma = forma;
+            Debug.Log("ESCOJIDO");
+>>>>>>> c62b27af6a094894976674791488aeed7d039102
         }
     }
 }
