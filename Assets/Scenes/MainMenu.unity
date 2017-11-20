@@ -984,7 +984,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayersText: {fileID: 68988321}
-  formasImagen: []
+  formasImagen:
+  - forma: 0
+    imagen: {fileID: 21300000, guid: a000f5316f3bd68479ce1fee77cc1a6f, type: 3}
+  - forma: 1
+    imagen: {fileID: 21300000, guid: 3810bb175b0d3ab47aada2ff3adff6c5, type: 3}
+  - forma: 2
+    imagen: {fileID: 21300000, guid: 6f3eb9883d25e564fb131cfd114c4f21, type: 3}
+  - forma: 3
+    imagen: {fileID: 21300000, guid: 52200edb82952cb4b9f1acf96441fda5, type: 3}
 --- !u!4 &1209098449
 Transform:
   m_ObjectHideFlags: 0
