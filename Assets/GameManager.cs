@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
         {
             Instance = this;
             DontDestroyOnLoad(this);
+            Debug.Log("CEMAMO");
         }
         else
         {
@@ -68,11 +69,9 @@ public class GameManager : MonoBehaviour {
 
     void AddScoreToPlayer(int index, int toAddScore)
     {
-
         Players[index] += toAddScore;
-
-
     }
+
     public Sprite getSprite(Pieza.Forma forma)
     {
         for (int i = 0; i < formasImagen.Length; i++)
