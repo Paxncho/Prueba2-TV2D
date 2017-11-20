@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject template;
     public static GameManager Instance { get; set; }
 
     public Text PlayersText;
@@ -31,18 +30,6 @@ public class GameManager : MonoBehaviour {
     public void Starting()
     {
         ResetScores();
-
-        for (int i = 0; i < 9; i++)
-        {
-            GameObject pieza =  Instantiate(template) as GameObject;
-            pieza.SetActive(true);
-            pieza.transform.SetParent(template.transform.parent);
-
-            pieza.GetComponent<Pieza>().color = Color.red;
-            pieza.GetComponent<Pieza>().forma = Pieza.Forma.Circulo;
-
-
-        }
         
     }
 
@@ -83,6 +70,7 @@ public class GameManager : MonoBehaviour {
 
     void AddScoreToPlayer(int index, int toAddScore)
     {
+
         Players[index] += toAddScore;
 
 
