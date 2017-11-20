@@ -2068,7 +2068,10 @@ CanvasRenderer:
   m_GameObject: {fileID: 1810273657}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of fcb8224... SceneManager Mejorado
 =======
 >>>>>>> parent of fcb8224... SceneManager Mejorado
 --- !u!1 &1994233008
@@ -2108,7 +2111,11 @@ MonoBehaviour:
     imagen: {fileID: 21300000, guid: 6f3eb9883d25e564fb131cfd114c4f21, type: 3}
   - forma: 3
 <<<<<<< HEAD
+<<<<<<< HEAD
     imagen: {fileID: 21300000, guid: 52200edb82952cb4b9f1acf96441fda5, type: 3}
+=======
+    imagen: {fileID: 21300000, guid: c8310460bfc915c4eb356b7b1f7f7899, type: 3}
+>>>>>>> parent of fcb8224... SceneManager Mejorado
 =======
     imagen: {fileID: 21300000, guid: c8310460bfc915c4eb356b7b1f7f7899, type: 3}
 >>>>>>> parent of fcb8224... SceneManager Mejorado
@@ -2126,6 +2133,9 @@ Transform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1e62c8918553749410737edf97bde08d37081299
+=======
+>>>>>>> parent of fcb8224... SceneManager Mejorado
 =======
 >>>>>>> parent of fcb8224... SceneManager Mejorado
