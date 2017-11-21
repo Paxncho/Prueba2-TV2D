@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class ScenesManager: MonoBehaviour {
 
-	public GameObject botonjugador;
-    public GameObject Panel;
-    public GameObject Gameover;
+	//public GameObject botonjugador;
+    //public GameObject Panel;
+    //public GameObject Gameover;
 
     public static ScenesManager Instance;
     void Awake()
@@ -36,8 +36,8 @@ public class ScenesManager: MonoBehaviour {
 
         if (go != null)
         {
-            Panel = go;
-            Panel.SetActive(false);
+            //Panel = go;
+            //Panel.SetActive(false);
         }
     }
 
@@ -65,17 +65,6 @@ public class ScenesManager: MonoBehaviour {
 			{
 				objeto.SetActive(true);
 			}
-		}
-	}
-
-	public void createJugadores()
-	{
-		int cantJugadores = GameManager.Instance.numPlayers;
-        //Panel = GameObject.Find ("PanelJugadores");
-        this.Panel.SetActive(true);
-		for (int i = 1; i <= cantJugadores; i++) {
-			Text texto = Instantiate(botonjugador, Panel.transform).GetComponentInChildren<Text>();
-			texto.text = "Jugador " + i;
 		}
 	}
 }

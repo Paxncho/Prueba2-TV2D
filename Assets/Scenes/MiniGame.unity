@@ -1659,10 +1659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b201a175c5573d14aba83db0b27f9232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botonjugador: {fileID: 1961893953869144, guid: 9db8ca5b558ab8843a962f3e5715e1ed,
-    type: 2}
-  Panel: {fileID: 1036997244024482, guid: 0f47ea5ef7aeac743b2d3398e729eb30, type: 2}
-  Gameover: {fileID: 0}
 --- !u!224 &1329669985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1923,6 +1919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayersText: {fileID: 0}
+  TimeToChoosePlayer: 0
+  choosedPlayerIndex: 0
   numPlayers: 0
   PiezaCorrecta: {fileID: 0}
   formasImagen:
@@ -2049,8 +2047,9 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1036997244024482, guid: 0f47ea5ef7aeac743b2d3398e729eb30, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 114034727418955044, guid: 0f47ea5ef7aeac743b2d3398e729eb30,
+        type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

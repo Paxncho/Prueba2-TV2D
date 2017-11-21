@@ -6,15 +6,19 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance { get; set; }
-
     public Text PlayersText;
 
+    public bool TimeToChoosePlayer = false;
+    public int choosedPlayerIndex;
     public int numPlayers = 1; //Número "Temporal" de jugadores
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
     public Pieza PiezaCorrecta;
     public FormaImagen[] formasImagen;
+
+    public List<Pieza> Piezas = new List<Pieza>();
+    public Pieza currentSelectedPieza;
 
     public void Awake()
     {
@@ -27,16 +31,14 @@ public class GameManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-
     }
-
 
     public void Starting()
     {
         Play();
         ResetScores();
-        ScenesManager.Instance.Panel.SetActive(false);
-        ScenesManager.Instance.Gameover.SetActive(false);
+        //ScenesManager.Instance.Panel.SetActive(false);
+        //ScenesManager.Instance.Gameover.SetActive(false);
     }
 
     public void Check(int index, Pieza piezaSeleccionada)
@@ -56,6 +58,12 @@ public class GameManager : MonoBehaviour {
         {
             AddScoreToPlayer(index, -1);
         }
+        jugadaIndex++;
+
+        Debug.Log("Jugada numero = " + jugadaIndex);
+        Debug.Log("Jugador " + index + "Tiene " + Players[index] + "Puntos");
+
+        Randomize();
 
 
     }
@@ -93,13 +101,14 @@ public class GameManager : MonoBehaviour {
 
     public void Play() {
         Players = new int[numPlayers];
-        //Cargar Minigame
     }
 
-    public void Generate()
+    public void Randomize()
     {
-
-
+        foreach (Pieza pieza in Piezas)
+        {
+            pieza.randomize();
+        }
     }
 
 

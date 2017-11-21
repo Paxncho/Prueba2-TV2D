@@ -25,27 +25,17 @@ public class Pieza : MonoBehaviour
 
         MyButton = GetComponent<Button>();
         MyButton.onClick.AddListener(check);
-    }
-
-    void Update()
-    {
-<<<<<<< HEAD
-        //sp.color = color;
-        //sp.sprite = GameManager.Instance.getSprite(forma);
-=======
-
-
->>>>>>> 28634c49b41e40febe62a679998846443384d6c0
+        GameManager.Instance.Piezas.Add(this);
     }
 
     void check()
     {
-        Debug.Log("2");
-        ScenesManager.Instance.createJugadores();
-        Debug.Log("3");
+        GameManager.Instance.currentSelectedPieza = this;
+        GameManager.Instance.TimeToChoosePlayer = true;
+        //ScenesManager.Instance.createJugadores();
     }
 
-    void randomize()
+    public void randomize()
     {
         int randomForma = Random.Range(0, 3);
         int randomColor = Random.Range(0, 4);
@@ -75,21 +65,9 @@ public class Pieza : MonoBehaviour
         if (randomCorrecto == 1)
         {
             GameManager.Instance.PiezaCorrecta = this;
-<<<<<<< HEAD
             Image piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Image>();
             piezaCorrecta.color = color;
             piezaCorrecta.sprite = GameManager.Instance.getSprite(forma);
-=======
-
-            Debug.Log("Escogi");
-
-
-            Image piezaCorrecta = GameObject.FindGameObjectWithTag("Recipe").GetComponent<Image>();
-            piezaCorrecta.color = color;
-            piezaCorrecta.sprite = GameManager.Instance.getSprite(forma);
-            Debug.Log("ESCOJIDO");
-
->>>>>>> 28634c49b41e40febe62a679998846443384d6c0
         }
     }
 }
