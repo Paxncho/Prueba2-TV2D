@@ -1893,6 +1893,40 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1614711321660654, guid: f8f70d6d51263d44e9a7b0a98656f4df, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114055200939316996, guid: f8f70d6d51263d44e9a7b0a98656f4df,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114055200939316996, guid: f8f70d6d51263d44e9a7b0a98656f4df,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114055200939316996, guid: f8f70d6d51263d44e9a7b0a98656f4df,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115356391170566, guid: f8f70d6d51263d44e9a7b0a98656f4df,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115356391170566, guid: f8f70d6d51263d44e9a7b0a98656f4df,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114115356391170566, guid: f8f70d6d51263d44e9a7b0a98656f4df,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8f70d6d51263d44e9a7b0a98656f4df, type: 2}
   m_IsPrefabParent: 0
@@ -2036,6 +2070,7 @@ MonoBehaviour:
   TimeToChoosePlayer: 0
   choosedPlayerIndex: 0
   numPlayers: 0
+  cantidadDeJugadas: 5
   PiezaCorrecta: {fileID: 0}
   formasImagen:
   - forma: 0

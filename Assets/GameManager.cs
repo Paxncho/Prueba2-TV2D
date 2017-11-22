@@ -14,11 +14,15 @@ public class GameManager : MonoBehaviour {
     int[] Players; //Jugadores
     int jugadaIndex; //(0,5)
 
+    public int cantidadDeJugadas = 5;
+
     public Pieza PiezaCorrecta;
     public FormaImagen[] formasImagen;
 
     public List<Pieza> Piezas = new List<Pieza>();
     public Pieza currentSelectedPieza;
+
+    public GameObject gameOverScreen;
 
     public void Awake()
     {
@@ -33,10 +37,24 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    void OnLevelWasLoaded(int level) {
+        GameObject go = GameObject.Find("GameOverPanel");
+
+        if (go != null) {
+            gameOverScreen = go;
+            go.SetActive(false);
+        }
+    }
+
     public void Starting()
     {
+        if (gameOverScreen != null)
+            gameOverScreen.SetActive(false);
+
         Play();
         ResetScores();
+        jugadaIndex = 0;
+        Randomize();
         //ScenesManager.Instance.Panel.SetActive(false);
         //ScenesManager.Instance.Gameover.SetActive(false);
     }
@@ -63,9 +81,11 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Jugada numero = " + jugadaIndex);
         Debug.Log("Jugador " + index + "Tiene " + Players[index] + "Puntos");
 
-        Randomize();
-
-
+        if (jugadaIndex == cantidadDeJugadas) {
+            GameOver();
+        } else {
+            Randomize();
+        }
     }
 
     private void ResetScores()
@@ -111,5 +131,24 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    void GameOver() {
+        int winnerPlayer = 0;
+        int maxScore = int.MinValue;
+
+        for (int i = 0; i < Players.Length; i++) {
+            if (Players[i] > maxScore) {
+                winnerPlayer = i;
+                maxScore = Players[i];
+            }
+        }
+
+        gameOverScreen.SetActive(true);
+
+        Text playerWinText = GameObject.Find("NPlayer").GetComponent<Text>();
+        playerWinText.text = (winnerPlayer + 1).ToString();
+
+        GameObject.Find("PlayBtn").GetComponent<Button>().onClick.AddListener(Starting);
+        GameObject.Find("VolverBtn").GetComponent<Button>().onClick.AddListener(ScenesManager.Instance.toMainMenu);
+    }
 
 }
