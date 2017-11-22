@@ -142,6 +142,7 @@ public class GameManager : MonoBehaviour {
             }
         }
 
+        GameObject go = GameObject.Find("GameOverPanel");
         gameOverScreen.SetActive(true);
 
         Text playerWinText = GameObject.Find("NPlayer").GetComponent<Text>();
