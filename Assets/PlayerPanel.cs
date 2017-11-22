@@ -44,8 +44,7 @@ public class PlayerPanel : MonoBehaviour {
         for (int i = 1; i <= cantJugadores; i++)
         {
             GameObject buttonP = Instantiate(PlayerButton, transform) as GameObject;
-            buttonP.GetComponent<ChoosePlayerButton>().indexOfPlayer = i;
-            buttonP.GetComponent<ChoosePlayerButton>().textIndex.text = "Jugador " + i;
+            buttonP.GetComponentInChildren<Text>().text = "Jugador " + i;
         }
     }
 
