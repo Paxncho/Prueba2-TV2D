@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     public int choosedPlayerIndex;
     public int numPlayers = 1; //Número "Temporal" de jugadores
     int[] Players; //Jugadores
-    int jugadaIndex; //(0,5)
+    public int jugadaIndex; //(0,5)
 
     public int cantidadDeJugadas = 5;
 
@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour {
         Debug.Log("Jugada numero = " + jugadaIndex);
         Debug.Log("Jugador " + index + "Tiene " + Players[index] + "Puntos");
 
-        if (jugadaIndex == cantidadDeJugadas) {
+        if (jugadaIndex >= cantidadDeJugadas) {
             GameOver();
         } else {
             Randomize();
